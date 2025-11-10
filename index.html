@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Impressiona't - Servei professional d'impressió 3D a Catalunya. Més de 5 anys d'experiència. Pressupostos personalitzats, comunicació directa i sense intermediaris."/>
+    <meta property="og:title" content="Impressiona't - Impressió 3D Professional"/>
+    <meta property="og:description" content="Transformem idees en realitat amb impressió 3D FDM i SLA. Comunicació directa per garantir el resultat perfecte."/>
+    <meta property="og:type" content="website"/>
+    <title>Impressiona't - Impressió 3D Professional | Comunicació Directa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.birds.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-hover:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
+        .material-card { background: linear-gradient(145deg, #f8fafc, #e2e8f0); }
+        .color-sample { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        .floating { animation: floating 4s ease-in-out infinite; }
+        @keyframes floating { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-15px) rotate(2deg); } }
+        .gradient-text { background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .star-rating { cursor: pointer; }
+        .star-rating:hover .fa-star { color: #fbbf24; }
+        .review-card { background: linear-gradient(145deg, #ffffff, #f3f4f6); }
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        .communication-highlight { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .btn-primary { background: linear-gradient(135deg, #3b82f6, #8b5cf6); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4); }
+        .price-card { border: 1px solid #e5e7eb; transition: all 0.3s ease; }
+        .price-card:hover { border-color: #3b82f6; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1); }
+    </style>
+<base target="_blank">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center" aria-label="Logo Impressiona't">
+                        <i class="fas fa-cube text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">Impressiona't</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#inici" class="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50">Inici</a>
+                    <a href="#serveis" class="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50">Serveis</a>
+                    <a href="#materials" class="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50">Materials</a>
+                    <a href="#preus" class="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50">Preus</a>
+                    <a href="#contacte" class="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50">Contacte</a>
+                    <a href="#ressenyes" class="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50">Ressenyes</a>
+                </div>
+                <button class="md:hidden text-gray-700" aria-label="Menú mòbil">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inici" class="hero-bg min-h-screen flex items-center relative overflow-hidden pt-16">
+        <div id="vanta-bg" class="absolute inset-0"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-white fade-in">
+                    <div class="inline-flex items-center bg-yellow-400 text-gray-900 px-5 py-3 rounded-full font-bold text-sm mb-6 pulse">
+                        <i class="fas fa-award mr-3 text-lg"></i>
+                        Més de 5 anys d'experiència en impressió 3D
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                        La Teva Idea 
+                        <span class="block text-yellow-300 mt-2">en 3D</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-8 text-gray-100 leading-relaxed">
+                        Amb més de 5 anys al sector, ara ens convertim en la teva empresa de confiança. 
+                        <strong>Comunicació directa, pressupostos personalitzats i resultats garantits.</strong>
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-10">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                            <i class="fas fa-comments text-yellow-300 text-2xl mb-2"></i>
+                            <p class="text-sm font-semibold">Comunicació Directa</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                            <i class="fas fa-euro-sign text-green-300 text-2xl mb-2"></i>
+                            <p class="text-sm font-semibold">1r Pressupost Gratis</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacte" class="btn-primary bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors text-center text-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Inicia la Conversa
+                        </a>
+                        <a href="#preus" class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-colors text-center text-lg">
+                            <i class="fas fa-tag mr-2"></i>
+                            Consulta Preus
+                        </a>
+                    </div>
+                </div>
+                <div class="relative fade-in">
+                    <div class="floating bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl">
+                        <h3 class="text-white text-2xl font-bold mb-6 text-center">Estat del teu Projecte</h3>
+                        <div class="space-y-5">
+                            <div class="flex items-center bg-white/20 rounded-xl p-4">
+                                <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-gray-900"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-semibold">1. Ens escrius</p>
+                                    <p class="text-gray-200 text-sm">Correu directe, sense intermediaris</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center bg-white/20 rounded-xl p-4">
+                                <div class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-cogs text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-semibold">2. Configurem</p>
+                                    <p class="text-gray-200 text-sm">T'assessorem personalment</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center bg-white/20 rounded-xl p-4">
+                                <div class="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-box text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-semibold">3. Reps la peça</p>
+                                    <p class="text-gray-200 text-sm">Tal com la volies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serveis Section -->
+    <section id="serveis" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Tecnologia Adaptada a Tu</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Dues tecnologies diferents, un mateix objectiu: la teva satisfacció. T'ajudem a triar la millor opció.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="card-hover bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl shadow-lg overflow-hidden border border-orange-200">
+                    <div class="h-72 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center relative">
+                        <div class="text-center text-white z-10">
+                            <i class="fas fa-cube text-7xl mb-4"></i>
+                            <h3 class="text-3xl font-bold">Filament FDM</h3>
+                            <p class="text-orange-100 mt-2">Peces robustes i econòmiques</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/10"></div>
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-2xl font-semibold mb-4 text-gray-900">Per a Prototips Funcionals</h4>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                            La tecnologia FDM és perfecta quan necessites resistència i volum. Ideal per peces mecàniques, utilitàries o prototips que han de funcionar.
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-4 mt-1 text-xl"></i>
+                                <div>
+                                    <strong>Resistència i Durabilitat</strong>
+                                    <p class="text-sm text-gray-500">Peces que suporten esforços mecànics</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-4 mt-1 text-xl"></i>
+                                <div>
+                                    <strong>16 Colors Vius</strong>
+                                    <p class="text-sm text-gray-500">Des del Blanc Pro fins al Verd Fosc</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-4 mt-1 text-xl"></i>
+                                <div>
+                                    <strong>Màxim Aprofitament</strong>
+                                    <p class="text-sm text-gray-500">La millor relació qualitat-preu del mercat</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='#contacte'" class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-xl font-bold hover:shadow-lg transition-all">
+                            <i class="fas fa-comment-dots mr-2"></i>
+                            Consulta'm FDM
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-lg overflow-hidden border border-blue-200">
+                    <div class="h-72 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center relative">
+                        <div class="text-center text-white z-10">
+                            <i class="fas fa-droplet text-7xl mb-4"></i>
+                            <h3 class="text-3xl font-bold">Resina SLA</h3>
+                            <p class="text-blue-100 mt-2">Precisió a nivell micromètric</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/10"></div>
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-2xl font-semibold mb-4 text-gray-900">Per a Detalls Perfectes</h4>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                            Quan la precisió és tot. Figuretes, joies, miniatures o qualsevol peça on cada detall compta. Superfícies com el vidre.
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start text-gray-700">
+                                <i class="fas fa-check-circle text-blue-500 mr-4 mt-1 text-xl"></i>
+                                <div>
+                                    <strong>Precisió Extrema 0.05mm</strong>
+                                    <p class="text-sm text-gray-500">Detalls impossibles amb FDM</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start text-gray-700">
+                                <i class="fas fa-check-circle text-blue-500 mr-4 mt-1 text-xl"></i>
+                                <div>
+                                    <strong>Acabat Professional</strong>
+                                    <p class="text-sm text-gray-500">Superfícies llises sense post-procés</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start text-gray-700">
+                                <i class="fas fa-check-circle text-blue-500 mr-4 mt-1 text-xl"></i>
+                                <div>
+                                    <strong>Complexitat Màxima</strong>
+                                    <p class="text-sm text-gray-500">Geometries impossibles per a FDM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='#contacte'" class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-4 rounded-xl font-bold hover:shadow-xl transition-all">
+                            <i class="fas fa-comment-dots mr-2"></i>
+                            Consulta'm Resina
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-10 text-white text-center shadow-2xl">
+                <i class="fas fa-comments text-6xl mb-6 opacity-90"></i>
+                <h3 class="text-3xl font-bold mb-4">No Saps Què Triar?</h3>
+                <p class="text-xl mb-8 opacity-90">
+                    T'ajudem a decidir. Envïa'ns el fitxer per correu i et direm quina tecnologia et convé més. <strong>Sense compromís.</strong>
+                </p>
+                <a href="#contacte" class="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all inline-block">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    Demana Assessorament Gratis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section id="materials" class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Materials de Qualitat Professional</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Triem els millors materials per garantir resultats excepcionals. Cada un té propietats específiques per adaptar-se al teu projecte.
+                </p>
+            </div>
+
+            <!-- Material PLA -->
+            <div class="mb-16 fade-in">
+                <div class="material-card rounded-3xl p-10 mb-8 shadow-lg border border-green-200">
+                    <div class="flex items-center mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+                            <i class="fas fa-leaf text-white text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900">PLA (Polilàctid)</h3>
+                            <p class="text-gray-600 text-lg">Material biodegradable i ecològic</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-2 gap-10">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-cogs text-green-500 mr-3"></i>
+                                Propietats i Punts Forts
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Fàcil d'imprimir i manipular</p>
+                                            <p class="text-sm text-gray-600">Compatible amb la majoria d'impressores 3D, sense necessitat de calentar el llit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Material biodegradable i sostenible</p>
+                                            <p class="text-sm text-gray-600">Fet de midó de blat de moro, es descompon naturalment</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Baixa toxicitat i sense olors forts</p>
+                                            <p class="text-sm text-gray-600">Segur per usar a casa, sense emissions perilloses</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Ideal per prototips i figuretes decoratives</p>
+                                            <p class="text-sm text-gray-600">Acabat net i detallat per a peces no mecàniques</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-palette text-green-500 mr-3"></i>
+                                Colors Disponibles (13 colors)
+                            </h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-white mx-auto mb-2 border-2 border-gray-300 group-hover:border-gray-400"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Blanc</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-black mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Negre</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-blue-600 mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Blau</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-red-600 mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Vermell</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-blue-300 mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Blau Clar Mat</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-cyan-500 mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Blau Turquesa</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-pink-400 mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Rosa Mat</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-yellow-400 mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Groc Mat</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-gray-100 mx-auto mb-2 border-2 border-gray-300"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Blanc Pro</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-amber-800 mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Marró</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-purple-500 mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Lila</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-green-800 mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Verd Fosc</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-green-400 mx-auto mb-2"></div>
+                                    <span class="text-xs text-gray-600 font-medium">Verd Clar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Material TPU -->
+            <div class="mb-16 fade-in">
+                <div class="material-card rounded-3xl p-10 mb-8 shadow-lg border border-purple-200">
+                    <div class="flex items-center mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+                            <i class="fas fa-expand-arrows-alt text-white text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900">TPU (Poliuretà Termoplàstic)</h3>
+                            <p class="text-gray-600 text-lg">Material flexible i resistent</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-2 gap-10">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-cogs text-purple-500 mr-3"></i>
+                                Propietats i Punts Forts
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-purple-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Alta flexibilitat i elasticitat</p>
+                                            <p class="text-sm text-gray-600">Es pot estirar i torçar sense trencar-se, ideal per peces que necessiten moviment</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-purple-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Resistent a l'abrasió i impactes</p>
+                                            <p class="text-sm text-gray-600">Perfecte per peces que s'han de resistir a cops i frec constants</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-purple-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Ideal per a juntes, coixins i peces amortidores</p>
+                                            <p class="text-sm text-gray-600">Complement perfecte per a enginyeria i disseny funcional</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-purple-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Duresa Shore 95A</p>
+                                            <p class="text-sm text-gray-600">Flexibilitat controlada, no és massa tou ni massa dur</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-palette text-purple-500 mr-3"></i>
+                                Colors Disponibles (3 colors)
+                            </h4>
+                            <div class="grid grid-cols-3 gap-6">
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-white mx-auto mb-2 border-2 border-gray-400"></div>
+                                    <span class="text-sm text-gray-600 font-medium">Blanc</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-black mx-auto mb-2"></div>
+                                    <span class="text-sm text-gray-600 font-medium">Negre</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-gray-200 mx-auto mb-2 border-2 border-gray-400"></div>
+                                    <span class="text-sm text-gray-600 font-medium">Transparent</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 bg-purple-50 rounded-xl p-5 border border-purple-200">
+                                <h5 class="font-bold text-purple-800 mb-3 flex items-center">
+                                    <i class="fas fa-lightbulb mr-2"></i>
+                                    Quan usar TPU?
+                                </h5>
+                                <ul class="space-y-2 text-purple-700 text-sm">
+                                    <li class="flex items-start"><i class="fas fa-check mr-2 mt-1 text-xs"></i> Peçes que necessiten flexionar-se</li>
+                                    <li class="flex items-start"><i class="fas fa-check mr-2 mt-1 text-xs"></i> Protectors i recobriments</li>
+                                    <li class="flex items-start"><i class="fas fa-check mr-2 mt-1 text-xs"></i> Rodes i rodets</li>
+                                    <li class="flex items-start"><i class="fas fa-check mr-2 mt-1 text-xs"></i> Juntes i segells personalitzats</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resina Section -->
+            <div class="mb-8 fade-in">
+                <div class="material-card rounded-3xl p-10 shadow-lg border border-blue-200">
+                    <div class="flex items-center mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+                            <i class="fas fa-droplet text-white text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900">Resina Fotopolímera</h3>
+                            <p class="text-gray-600 text-lg">Màxima precisió i detall</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-2 gap-10">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-cogs text-blue-500 mr-3"></i>
+                                Propietats i Punts Forts
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-blue-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Precisió extrema (0.05mm)</p>
+                                            <p class="text-sm text-gray-600">Detalls i textures impossibles d'aconseguir amb FDM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-blue-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Superfícies llises i detallades</p>
+                                            <p class="text-sm text-gray-600">Acabat professional sense necessitat de post-procés</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-blue-500 mr-3 mt-1"></i>
+                                        <div>
+                                            <p class="font-semibold text-gray-800">Ideal per a figuretes, joies i peces miniatures</p>
+                                            <p class="text-sm text-gray-600">Qualitat de fàbrica per a peces petites i complexes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-palette text-blue-500 mr-3"></i>
+                                Colors Disponibles (2 colors)
+                            </h4>
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-gray-500 mx-auto mb-2"></div>
+                                    <span class="text-sm text-gray-600 font-medium">Gris</span>
+                                </div>
+                                <div class="text-center group hover:scale-110 transition-all">
+                                    <div class="color-sample bg-blue-100 mx-auto mb-2 border-2 border-blue-200"></div>
+                                    <span class="text-sm text-gray-600 font-medium">Transparent</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nota de Comandes Personalitzades -->
+            <div class="bg-gradient-to-r from-yellow-100 to-orange-100 border-l-4 border-yellow-400 p-8 rounded-2xl shadow-lg fade-in">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-info-circle text-yellow-600 text-3xl mr-4"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-yellow-800 mb-2">Comandes amb Colors o Materials Especials</h4>
+                        <p class="text-yellow-700 mb-3">
+                            Si necessites un <strong>color específic</strong> que no tenim en estoc, o un <strong>material diferent</strong> (ABS, PETG, Nylon, etc.), <strong>envia'ns un correu</strong> a 
+                            <a href="mailto:3dimpressionat@gmail.com?subject=Comanda%20material%20especial" class="font-bold underline text-yellow-800 hover:text-yellow-900">
+                                3dimpressionat@gmail.com
+                            </a>
+                        </p>
+                        <p class="text-yellow-700 mb-3">
+                            També oferim <strong>servei de pintura personalitzada</strong> per a figuretes i peces especials. Consulta'ns sense compromís!
+                        </p>
+                        <div class="bg-white rounded-xl p-4 mt-4 border border-yellow-300">
+                            <p class="text-yellow-800 font-semibold text-sm flex items-center">
+                                <i class="fas fa-clock mr-2"></i>
+                                Temps d'encàrrec de material especial: 7-10 dies laborables
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preus Section -->
+    <section id="preus" class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Pressupostos Transparent</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    El primer pressupost per peca és sempre <strong>gratis</strong>. T'ajustem el preu a les teves necessitats reals.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="price-card bg-white rounded-3xl shadow-lg p-10 hover:scale-105 transition-all">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cube text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Filament FDM</h3>
+                        <p class="text-gray-600">Peces funcionals i prototips</p>
+                    </div>
+                    <div class="space-y-5 mb-8">
+                        <div class="flex justify-between items-center border-b pb-3">
+                            <span class="text-gray-700 font-medium">Peça 10cm d'alçada</span>
+                            <span class="font-bold text-2xl text-gray-900">10-20€</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-3">
+                            <span class="text-gray-700 font-medium">Peça 20cm d'alçada</span>
+                            <span class="font-bold text-2xl text-gray-900">25-45€</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> 16 colors disponibles</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Ideal per a peces grans</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Acabat funcional</li>
+                    </ul>
+                    <div class="communication-highlight rounded-xl p-4 mb-6">
+                        <p class="text-gray-800 font-semibold text-sm">
+                            <i class="fas fa-envelope mr-2"></i>
+                            1r Pressupost GRATIS per peça
+                        </p>
+                    </div>
+                    <button onclick="window.location.href='#contacte'" class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all">
+                        Sol·licita Preu
+                    </button>
+                </div>
+
+                <div class="price-card bg-white rounded-3xl shadow-xl p-10 border-3 border-blue-500 relative hover:scale-105 transition-all">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                        <i class="fas fa-star mr-2"></i> Més Demandat
+                    </div>
+                    <div class="text-center mb-8 mt-4">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-droplet text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Resina SLA</h3>
+                        <p class="text-gray-600">Màxima precisió i detall</p>
+                    </div>
+                    <div class="space-y-5 mb-8">
+                        <div class="flex justify-between items-center border-b pb-3">
+                            <span class="text-gray-700 font-medium">Figura 10cm d'alçada</span>
+                            <span class="font-bold text-2xl text-gray-900">20-40€</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-3">
+                            <span class="text-gray-700 font-medium">Figura 20cm d'alçada</span>
+                            <span class="font-bold text-2xl text-gray-900">50-90€</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-3"></i> Precisió extrema 0.05mm</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-3"></i> Superfícies llises</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-3"></i> Ideal per a figuretes</li>
+                    </ul>
+                    <div class="communication-highlight rounded-xl p-4 mb-6 border border-yellow-300">
+                        <p class="text-gray-800 font-semibold text-sm">
+                            <i class="fas fa-envelope mr-2"></i>
+                            1r Pressupost GRATIS per peça
+                        </p>
+                        <p class="text-xs text-gray-600 mt-1">Consulta'ns abans de decidir</p>
+                    </div>
+                    <button onclick="window.location.href='#contacte'" class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl font-bold hover:shadow-xl transition-all">
+                        Sol·licita Preu
+                    </button>
+                </div>
+
+                <div class="price-card bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl shadow-lg p-10 hover:scale-105 transition-all">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-crown text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Servei Premium</h3>
+                        <p class="text-gray-600">Prioritat màxima i tracte VIP</p>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">Temps mínim</span>
+                            <span class="font-bold text-lg text-gray-900">Prioritat</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">Configuració</span>
+                            <span class="font-bold text-lg text-gray-900">Gratuïta</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">Suport</span>
+                            <span class="font-bold text-lg text-gray-900">Directe</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-500 mr-3"></i> Peça revisada per expert</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-500 mr-3"></i> Actualitzacions constants</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-500 mr-3"></i> Descomptes recurrents</li>
+                    </ul>
+                    <div class="bg-yellow-100 border border-yellow-300 rounded-xl p-4 mb-6">
+                        <p class="text-yellow-800 font-semibold text-sm">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Per a clients habituals o projectes urgents
+                        </p>
+                    </div>
+                    <button onclick="window.location.href='#contacte'" class="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all">
+                        Activa Premium
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mt-16">
+                <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-blue-500 fade-in">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">
+                        <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                        Factors que Afecten el Preu
+                    </h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i> <span><strong>Mida i volum:</strong> Grans superfícies augmenten costos de material i temps</span></li>
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i> <span><strong>Complexitat:</strong> Molts detalls requereixen més temps d'impressió i post-procés</span></li>
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i> <span><strong>Acabat:</strong> Pintura, polit o tractaments especials són extra</span></li>
+                        <li class="flex items-start"><i class="fas fa-arrow-right text-blue-500 mr-2 mt-1"></i> <span><strong>Quantitat:</strong> Descomptes especials a partir de 5 unitats iguals</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-200 fade-in">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">
+                        <i class="fas fa-envelope-open text-purple-500 mr-2"></i>
+                        Com Funciona el Preu?
+                    </h4>
+                    <div class="space-y-3 text-gray-700">
+                        <p class="bg-white rounded-lg p-3 shadow-sm">
+                            <strong>1r pressupost per peça:</strong> <span class="text-green-600 font-semibold">TOT GRATIS</span>
+                        </p>
+                        <p class="bg-white rounded-lg p-3 shadow-sm">
+                            <strong>Modificacions posteriors:</strong> <span class="text-yellow-600 font-semibold">5€ per revisió</span> (després de 3 canvis)
+                        </p>
+                        <p class="bg-white rounded-lg p-3 shadow-sm">
+                            <strong>Configuració de peces:</strong> <span class="text-green-600 font-semibold">GRATIS</span> si ho fem nosaltres
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacte Section -->
+    <section id="contacte" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Parlem. És Així de Fàcil.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    No hi ha formularis complexos ni robots. <strong>Escriu-nos un correu</strong> i t'ajudem personalment.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div class="space-y-8 fade-in">
+                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 border border-blue-200 shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+                                <i class="fas fa-envelope text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">3dimpressionat@gmail.com</h3>
+                                <p class="text-gray-600">Responem personalment cada correu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center bg-white rounded-xl p-4 shadow-sm">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span class="text-gray-700">Resposta en <strong>24-48h</strong> laborables</span>
+                            </div>
+                            <div class="flex items-center bg-white rounded-xl p-4 shadow-sm">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span class="text-gray-700">Assessorament <strong>personalitzat</strong></span>
+                            </div>
+                            <div class="flex items-center bg-white rounded-xl p-4 shadow-sm">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span class="text-gray-700">Sense compromís ni pressa</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
+                            <p class="text-yellow-800 font-semibold text-sm">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Important: Si no reps resposta en 48h, revisa la carpeta de spam
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl shadow-lg p-8 border border-gray-200 fade-in">
+                        <h4 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                            <i class="fas fa-list-ol mr-3 text-blue-600"></i>
+                            Com Funciona?
+                        </h4>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center text-lg font-bold mr-4 mt-1 shadow-md">1</div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900 mb-1">Envia'ns un correu</h5>
+                                    <p class="text-gray-600">Adjunta el fitxer STL/OBJ i explica què vols</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center text-lg font-bold mr-4 mt-1 shadow-md">2</div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900 mb-1">Cuestiona'ns</h5>
+                                    <p class="text-gray-600">Responem amb pressupost i recomanacions</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center text-lg font-bold mr-4 mt-1 shadow-md">3</div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900 mb-1">Confirma i Produïm</h5>
+                                    <p class="text-gray-600">Un cop aprovat, comencem la impressió</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-2xl p-10 border border-gray-200 fade-in">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Envia'ns el Teu Projecte</h3>
+                    <p class="text-gray-600 mb-8">Omple aquest formulari i clicaràs un enllaç per escriure'ns directament. <strong>És més fàcil que escriure un correu des de zero!</strong></p>
+                    
+                    <form id="contactForm" class="space-y-6" novalidate>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">El teu Nom *</label>
+                                <input type="text" id="nom" name="nom" class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all" required minlength="3" placeholder="Com et dius?"/>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all" required placeholder="tucorreu@exemple.com"/>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nom del Projecte *</label>
+                            <input type="text" id="assumpte" name="assumpte" class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all" required minlength="5" placeholder="Ex: Prototip de carcassa"/>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Tecnologia Preferida *</label>
+                            <select id="tipus" name="tipus" class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all" required>
+                                <option value="">T'aconsellem nosaltres</option>
+                                <option value="fdm">Filament FDM (econòmic)</option>
+                                <option value="resina">Resina SLA (detall)</option>
+                                <option value="consulta">No ho sé, m'ajudeu</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Color / Comentaris</label>
+                            <input type="text" id="color" name="color" class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all" placeholder="Colors preferits o altres observacions"/>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Descripció Detallada *</label>
+                            <textarea id="missatge" name="missatge" rows="5" class="w-full px-4 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all resize-none" required minlength="20" placeholder="Explica què necessites: dimensions aproximades, ús de la peça, pressupost orientatiu si en tens..."></textarea>
+                        </div>
+
+                        <div class="bg-purple-50 border-2 border-purple-200 rounded-xl p-5">
+                            <div class="flex items-start">
+                                <i class="fas fa-paperclip text-purple-500 mr-3 mt-1 text-xl"></i>
+                                <div>
+                                    <p class="text-purple-800 font-semibold">Fitxer STL, OBJ o 3MF</p>
+                                    <p class="text-purple-600 text-sm">Un cop envïis el formulari, podràs adjunt-ho al correu. <strong>Màxim 50MB.</strong></p>
+                                    <p class="text-purple-500 text-xs mt-1">Si no tens el fitxer, descriu la idea i t'ajudem.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 px-6 rounded-xl font-bold text-lg hover:scale-105 transition-all">
+                            <i class="fas fa-paper-plane mr-3"></i>
+                            Obrir Correu i Envïar
+                        </button>
+                        
+                        <p class="text-center text-gray-500 text-sm mt-4">
+                            <i class="fas fa-lock mr-1"></i>
+                            No guardem les teves dades. El formulari només prepara el correu.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ressenyes Section -->
+    <section id="ressenyes" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Opinions Reals</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Cada ressenya és d'un client real. <strong>No comprem opinions.</strong> La teva opinió importa.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-8 mb-12 max-w-3xl mx-auto border border-gray-200 fade-in">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Valora el Nostre Servei</h3>
+                <p class="text-gray-600 mb-6">La teva opinió ajuda altres clients a decidir. És ràpid i fàcil!</p>
+                
+                <form id="reviewForm" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">El teu Nom *</label>
+                            <input type="text" id="reviewNom" name="reviewNom" class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all" required minlength="3" placeholder="Nom o inicials"/>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Projecte Realitzat *</label>
+                            <select id="reviewTipus" name="reviewTipus" class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all" required>
+                                <option value="">Selecciona el tipus</option>
+                                <option value="FDM">Filament FDM</option>
+                                <option value="Resina">Resina SLA</option>
+                                <option value="Premium">Servei Premium</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Puntuació *</label>
+                        <div class="star-rating flex space-x-3 justify-center" id="starRating">
+                            <i class="fas fa-star text-4xl text-gray-300 hover:text-yellow-400 transition-all" data-rating="1" aria-label="1 estrella"></i>
+                            <i class="fas fa-star text-4xl text-gray-300 hover:text-yellow-400 transition-all" data-rating="2" aria-label="2 estrelles"></i>
+                            <i class="fas fa-star text-4xl text-gray-300 hover:text-yellow-400 transition-all" data-rating="3" aria-label="3 estrelles"></i>
+                            <i class="fas fa-star text-4xl text-gray-300 hover:text-yellow-400 transition-all" data-rating="4" aria-label="4 estrelles"></i>
+                            <i class="fas fa-star text-4xl text-gray-300 hover:text-yellow-400 transition-all" data-rating="5" aria-label="5 estrelles"></i>
+                        </div>
+                        <input type="hidden" id="reviewPuntuacio" name="reviewPuntuacio" required/>
+                        <p class="text-center text-gray-500 text-sm mt-2">Clica a les estrelles per puntuar</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Comentari Detallat *</label>
+                        <textarea id="reviewComentari" name="reviewComentari" rows="4" class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all resize-none" required minlength="10" placeholder="Què et va semblar? La qualitat, el temps, la comunicació..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white py-4 px-6 rounded-xl font-bold text-lg hover:shadow-lg transition-all">
+                        <i class="fas fa-comment-dots mr-3"></i>
+                        Publicar Ressenya
+                    </button>
+                </form>
+            </div>
+
+            <div id="reviewsList" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Les ressenyes es carreguen aquí dinàmicament -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-10">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-cube text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Impressiona't</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-lg">
+                        Més de 5 anys transformant idees en realitat. Impressió 3D professional a Catalunya amb comunicació directa i tracte personalitzat.
+                    </p>
+                    <div class="flex items-center space-x-4 text-gray-400">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:3dimpressionat@gmail.com" class="hover:text-white transition-colors">3dimpressionat@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Materials</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#materials" class="hover:text-white transition-colors">PLA (13 colors)</a></li>
+                        <li><a href="#materials" class="hover:text-white transition-colors">TPU Flexible (3 colors)</a></li>
+                        <li><a href="#materials" class="hover:text-white transition-colors">Resina SLA (2 colors)</a></li>
+                        <li><a href="#materials" class="hover:text-white transition-colors">Comandes especials</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contacte</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#contacte" class="hover:text-white transition-colors">Comanda per Correu</a></li>
+                        <li><span class="text-sm">Resposta: 24-48h</span></li>
+                        <li><span class="text-sm">Pressupost: Gratis</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-400">
+                <p>Transformant idees en realitat. Tots els drets reservats.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js background
+        if (typeof VANTA !== 'undefined') {
+            VANTA.BIRDS({
+                el: "#vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                backgroundColor: 0x667eea,
+                color1: 0x764ba2,
+                color2: 0x667eea,
+                birdSize: 1.20,
+                wingSpan: 25.00,
+                speedLimit: 3.00,
+                separation: 20.00,
+                alignment: 20.00,
+                cohesion: 20.00,
+                quantity: 3.00
+            });
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission with validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            // Validació més estricta
+            if (!formData.get('nom') || formData.get('nom').length < 3) {
+                alert('Si us plau, escriu el teu nom (mínim 3 caràcters)');
+                return;
+            }
+            if (!formData.get('email') || !formData.get('email').includes('@')) {
+                alert('Si us plau, escriu un correu vàlid');
+                return;
+            }
+            if (!formData.get('assumpte') || formData.get('assumpte').length < 5) {
+                alert('Si us plau, posa un nom al projecte (mínim 5 caràcters)');
+                return;
+            }
+            if (!formData.get('missatge') || formData.get('missatge').length < 20) {
+                alert('Si us plau, descriu el projecte amb més detall (mínim 20 caràcters)');
+                return;
+            }
+            
+            const emailBody = `Hola,%0D%0A%0D%0A` +
+                `Vull demanar informació per a un encàrrec d'impressió 3D.%0D%0A%0D%0A` +
+                `📋 DADES DEL PROJECTE:%0D%0A` +
+                `Nom: ${formData.get('nom')}%0D%0A` +
+                `Email: ${formData.get('email')}%0D%0A` +
+                `Nom del projecte: ${formData.get('assumpte')}%0D%0A` +
+                `Tecnologia: ${formData.get('tipus') || 'M'aconsellem nosaltres'}%0D%0A` +
+                `Color/Comentaris: ${formData.get('color') || 'No especificat'}%0D%0A%0D%0A` +
+                `📄 DESCRIPCIÓ DETALLADA:%0D%0A${formData.get('missatge')}%0D%0A%0D%0A` +
+                `📎 FITXER:%0D%0A` +
+                `Adjunto el fitxer STL/OBJ/3MF en aquest correu.%0D%0A%0D%0A` +
+                `🔄 PRESSUPOST:%0D%0A` +
+                `Recorda que el 1r pressupost per peça és gratis!%0D%0A%0D%0A` +
+                `Espero la teva resposta. Gràcies!`;
+            
+            // Obrir client de correu
+            window.location.href = `mailto:3dimpressionat@gmail.com?subject=${encodeURIComponent(formData.get('assumpte'))}&body=${emailBody}`;
+            
+            alert('✅ S\'obre el teu client de correu amb el missatge preparat!\n\n📎 Recorda adjuntar el fitxer 3D abans d\'enviar.\n\n⏱️ Et respondrem en 24-48h laborables.');
+            
+            setTimeout(() => {
+                this.reset();
+            }, 2000);
+        });
+
+        // Star rating system
+        let selectedRating = 0;
+        const stars = document.querySelectorAll('#starRating .fa-star');
+        
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                selectedRating = parseInt(this.dataset.rating);
+                document.getElementById('reviewPuntuacio').value = selectedRating;
+                updateStars();
+            });
+            
+            star.addEventListener('mouseenter', function() {
+                const hoverRating = parseInt(this.dataset.rating);
+                stars.forEach((s, index) => {
+                    s.style.color = index < hoverRating ? '#fbbf24' : '#d1d5db';
+                });
+            });
+        });
+
+        document.getElementById('starRating').addEventListener('mouseleave', updateStars);
+
+        function updateStars() {
+            stars.forEach((s, index) => {
+                s.style.color = index < selectedRating ? '#fbbf24' : '#d1d5db';
+            });
+        }
+
+        // Review system
+        class ReviewManager {
+            constructor() {
+                this.storageKey = 'impressionat_reviews';
+                this.maxReviews = 30;
+            }
+
+            getReviews() {
+                const stored = localStorage.getItem(this.storageKey);
+                return stored ? JSON.parse(stored) : [];
+            }
+
+            addReview(review) {
+                let reviews = this.getReviews();
+                review.id = Date.now();
+                review.data = new Date().toLocaleDateString('ca-ES');
+                review.hora = new Date().toLocaleTimeString('ca-ES', { hour: '2-digit', minute: '2-digit' });
+                reviews.unshift(review);
+                
+                if (reviews.length > this.maxReviews) {
+                    reviews = reviews.slice(0, this.maxReviews);
+                }
+                
+                localStorage.setItem(this.storageKey, JSON.stringify(reviews));
+                return reviews;
+            }
+
+            renderReviews() {
+                const reviews = this.getReviews();
+                const container = document.getElementById('reviewsList');
+                
+                if (reviews.length === 0) {
+                    container.innerHTML = `
+                        <div class="col-span-full text-center bg-white rounded-2xl p-12 border border-dashed border-gray-300">
+                            <i class="fas fa-comments text-6xl text-gray-300 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-400 mb-2">Encara no hi ha ressenyes</h3>
+                            <p class="text-gray-500">Sigues el primer a compartir la teva experiència!</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = reviews.map(review => `
+                    <div class="review-card bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all hover:scale-105">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4 shadow-md">
+                                    <span class="text-white font-bold text-lg">${review.nom.charAt(0).toUpperCase()}</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-900">${review.nom}</p>
+                                    <p class="text-xs text-gray-500">${review.data} ${review.hora}</p>
+                                </div>
+                            </div>
+                            <span class="bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold">${review.tipus}</span>
+                        </div>
+                        <div class="flex mb-4">
+                            ${this.renderStars(review.puntuacio)}
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">${review.comentari}</p>
+                    </div>
+                `).join('');
+            }
+
+            renderStars(rating) {
+                let html = '';
+                for (let i = 1; i <= 5; i++) {
+                    html += `<i class="fas fa-star text-2xl ${i <= rating ? 'text-yellow-400' : 'text-gray-300'} mr-1" aria-hidden="true"></i>`;
+                }
+                return html;
+            }
+        }
+
+        const reviewManager = new ReviewManager();
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            reviewManager.renderReviews();
+            
+            // Add fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const review = {
+                nom: formData.get('reviewNom')?.trim(),
+                tipus: formData.get('reviewTipus') || 'FDM',
+                puntuacio: parseInt(formData.get('reviewPuntuacio')),
+                comentari: formData.get('reviewComentari')?.trim()
+            };
+
+            if (!review.nom || !review.puntuacio || !review.comentari) {
+                alert('⚠️ Completa tots els camps obligatoris i marca una puntuació');
+                return;
+            }
+
+            if (review.comentari.length < 10) {
+                alert('⚠️ El comentari ha de tenir almenys 10 caràcters');
+                return;
+            }
+
+            reviewManager.addReview(review);
+            reviewManager.renderReviews();
+            
+            alert('🎉 Gràcies per la teva ressenya! S\'ha publicat correctament i ajudarà altres clients.');
+            
+            this.reset();
+            selectedRating = 0;
+            document.getElementById('reviewPuntuacio').value = '';
+            updateStars();
+            document.getElementById('reviewsList').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-white/98', 'shadow-lg');
+                navbar.classList.remove('bg-white/95', 'shadow-sm');
+            } else {
+                navbar.classList.add('bg-white/95', 'shadow-sm');
+                navbar.classList.remove('bg-white/98', 'shadow-lg');
+            }
+        });
+
+        // Intersection observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.card-hover, .material-card, .review-card, .price-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+</body></html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
